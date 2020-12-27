@@ -10,7 +10,7 @@ url="https://github.com/bwhmather/wmii"
 license=('MIT')
 categories=()
 groups=()
-depends=('libx11' 'libxinerama' 'libxrandr')
+depends=('libixp' 'libx11' 'libxinerama' 'libxrandr')
 makedepends=('git' 'txt2tags')
 optdepends=(
   'dash: for use of the default wmiirc configs'
