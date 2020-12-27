@@ -30,12 +30,17 @@ pkgver() {
 
 build() {
   cd "$srcdir/wmii"
-  make PREFIX=/usr
+
+  sed -i 's|PREFIX = /usr/local|PREFIX = /usr|' config.mk
+  sed -i 's|ETC = $(PREFIX)/etc|ETC = /etc|' config.mk
+  sed -i 's|CONFDIR = wmii-hg|CONFDIR = wmii|' mk/wmii.mk
+
+  make
 }
 
 package() {
   cd "$srcdir/wmii"
-  make DESTDIR="$pkgdir/" PREFIX=/usr install
+  make DESTDIR="$pkgdir/" install
   install -Dm644 README.md $pkgdir/usr/share/doc/wmii/README.md
   install -Dm644 LICENSE $pkgdir/usr/share/licenses/wmii/LICENSE
   rm $pkgdir/usr/share/doc/wmii/LICENSE
