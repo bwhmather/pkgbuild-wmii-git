@@ -21,8 +21,8 @@ optdepends=(
   'ruby-rumai: for use of the alternative Ruby wmiirc'
 )
 checkdepends=()
-provides=()
-conflicts=("${pkgname%-*}" "${pkgname%-*}-hg")
+provides=(wmii)
+conflicts=(wmii wmii-hg)
 replaces=()
 backup=()
 options=()
