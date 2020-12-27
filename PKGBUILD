@@ -10,7 +10,7 @@ license=('MIT')
 categories=()
 groups=()
 depends=('libx11' 'libxinerama' 'libxrandr')
-makedepends=('git')
+makedepends=('git' 'txt2tags')
 optdepends=(
   'dash: for use of the default wmiirc configs'
   'libxft: for anti-aliased font support'
