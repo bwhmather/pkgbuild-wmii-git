@@ -1,7 +1,7 @@
 # Maintainer: Ben Mather <bwhmather@bwhmather.com>
 
 pkgname=wmii-git
-pkgver=r2820.489c9e47
+pkgver=r2833.e6904d0d
 pkgrel=1
 pkgdesc="A dynamic window manager for X11."
 arch=('i686' 'x86_64')
