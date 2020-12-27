@@ -44,5 +44,7 @@ package() {
   install -Dm644 README.md $pkgdir/usr/share/doc/wmii/README.md
   install -Dm644 LICENSE $pkgdir/usr/share/licenses/wmii/LICENSE
   rm $pkgdir/usr/share/doc/wmii/LICENSE
+  install -Dm644 img/icon.png $pkgdir/usr/share/icons/wmii.png
+  install -Dm644 debian/file/wmii.desktop $pkgdir/usr/share/xsessions/wmii.desktop
 }
 
