@@ -20,24 +20,24 @@ optdepends=(
 )
 provides=(wmii)
 conflicts=(wmii wmii-hg)
-source=("$pkgname::git+$url")
+source=("wmii::git+$url")
 md5sums=('SKIP')
 
 pkgver() {
-  cd "$srcdir/$pkgname"
+  cd "$srcdir/wmii"
   printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 build() {
-  cd "$srcdir/$pkgname"
+  cd "$srcdir/wmii"
   make PREFIX=/usr
 }
 
 package() {
-  cd "$srcdir/$pkgname"
+  cd "$srcdir/wmii"
   make DESTDIR="$pkgdir/" PREFIX=/usr install
-  install -Dm644 README.md $pkgdir/usr/share/doc/${pkgname%-*}/README.md
-  install -Dm644 LICENSE $pkgdir/usr/share/licenses/${pkgname%-*}/LICENSE
+  install -Dm644 README.md $pkgdir/usr/share/doc/wmii/README.md
+  install -Dm644 LICENSE $pkgdir/usr/share/licenses/wmii/LICENSE
   rm $pkgdir/usr/share/doc/wmii/LICENSE
 }
 
