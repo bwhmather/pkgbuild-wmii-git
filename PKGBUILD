@@ -3,13 +3,11 @@
 pkgname=wmii-git
 pkgver=r2820.489c9e47
 pkgrel=1
-epoch=
 pkgdesc="A dynamic window manager for X11."
 arch=('i686' 'x86_64')
 url="https://github.com/bwhmather/wmii"
 license=('MIT')
 categories=()
-groups=()
 depends=('libixp' 'libx11' 'libxinerama' 'libxrandr')
 makedepends=('git' 'txt2tags')
 optdepends=(
@@ -20,16 +18,9 @@ optdepends=(
   'python2: for use of the alternative Python wmiirc'
   'ruby-rumai: for use of the alternative Ruby wmiirc'
 )
-checkdepends=()
 provides=(wmii)
 conflicts=(wmii wmii-hg)
-replaces=()
-backup=()
-options=()
-changelog=
-install=
 source=("$pkgname::git+$url")
-noextract=()
 md5sums=('SKIP')
 
 pkgver() {
