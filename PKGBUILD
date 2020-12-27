@@ -1,4 +1,5 @@
-# Maintainer: aksr <aksr at t-com dot me>
+# Maintainer: Ben Mather <bwhmather@bwhmather.com>
+
 pkgname=wmii-git
 pkgver=r2820.489c9e47
 pkgrel=1
